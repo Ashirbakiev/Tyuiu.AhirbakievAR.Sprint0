@@ -2,22 +2,21 @@
 //
 
 #include <iostream>
+#include "..//Tyuiu.AhirbakievAR.Sprint0.Task7.V1.Lib/Tyuiu.AhirbakievAR.Sprint0.Task7.V1.Lib.cpp"
+
 
 int main()
 {
     setlocale(LC_ALL, "RU");
+    ISprint0Task7* date = new Service();
     int chislo;
     std::cout << "AshirbakievAR\n";
     std::cout << "Введите 3-х-значное число\n";
     std::cin >> chislo;
-    int a = chislo / 100;
-    int b = (chislo / 10)%10;
-    int c = chislo % 100;
     int n;
     std::cout << "Введите цифру\n";
     std::cin >> n;
-    bool l = (a == n) || (b == n) || (c == n);
-    std::cout << "В записи 3-х-значного числа " << chislo << ":\t" << std::boolalpha << l << std::endl;
+    std::cout << "В записи 3-х-значного числа " << chislo << ":\t" << std::boolalpha << date->Rezalt(chislo, n) << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
